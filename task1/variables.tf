@@ -36,3 +36,63 @@ variable "vms_ssh_public_root_key" {
   default     = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIF6BlRL7ju3oOkk33aTncS7h7aChx4ZIaUs8wipYkZFS dervish@devops"
   description = "ssh-keygen -t ed25519"
 }
+
+variable "vm_web_family" {
+  type        = string
+  default     = "ubuntu-2004-lts"
+  description = "yandex_compute_image"
+}
+
+variable "vm_web_name" {
+  type        = string
+  default     = "netology-develop-platform-web"
+  description = "name of compute instanse"
+}
+
+variable "vm_web_platform" {
+  type        = string
+  default     = "standard-v1"
+  description = "platform of compute instanse"
+}
+
+variable "vm_web_cores" {
+  type        = number
+  default     = 2
+  description = "CPU count"
+}
+
+variable "vm_web_memory" {
+  type        = number
+  default     = 1
+  description = "RAM size"
+}
+
+variable "vm_web_core_fraction" {
+  type        = number
+  default     = 5
+  description = "CPU core_fraction"
+}
+
+variable "vm_web_preemptible" {
+  type        = bool
+  default     = true
+  description = "enable preemptible"
+}
+
+variable "vm_web_nat" {
+  type        = bool
+  default     = true
+  description = "enable nat"
+}
+
+variable "vm_web_serial-port" {
+  type        = bool
+  default     = true
+  description = "enable serial-port"
+}
+
+variable "vm_web_user" {
+  type        = string
+  default     = "ubuntu"
+  description = "user"
+}
