@@ -46,3 +46,11 @@
 
 ## Задача 4
 
+>Объявляем в файле outputs.tf один output , содержащий: instance_name, external_ip, fqdn для каждой из ВМ в удобном формате.(без хардкода!!!). Вывод команды terraform output
+
+![outputs](task4/outputs.png)
+
+## Задача 5
+
+
+
