@@ -6,7 +6,7 @@ variable "vm_web_family" {
 
 variable "vm_web_name" {
   type        = string
-  default     = "netology-develop-platform-web"
+  default     = "netology-develop-web"
   description = "name of compute instanse"
 }
 
@@ -66,7 +66,7 @@ variable "vm_db_family" {
 
 variable "vm_db_name" {
   type        = string
-  default     = "netology-develop-platform-db"
+  default     = "netology-develop-db"
   description = "name of compute instanse"
 }
 

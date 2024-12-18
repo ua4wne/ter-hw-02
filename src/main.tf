@@ -13,8 +13,8 @@ data "yandex_compute_image" "ubuntu" {
   family = var.vm_web_family
 }
 
-resource "yandex_compute_instance" "platform" {
-  name        = var.vm_web_name
+resource "yandex_compute_instance" "web" {
+  name        = local.websrv_name
   platform_id = var.vm_web_platform
   zone        = var.default_zone
   resources {
@@ -50,7 +50,7 @@ resource "yandex_vpc_subnet" "db" {
 }
 
 resource "yandex_compute_instance" "db" {
-  name        = var.vm_db_name
+  name        = local.dbsrv_name
   platform_id = var.vm_db_platform
   zone        = var.vm_db_zone
   resources {
