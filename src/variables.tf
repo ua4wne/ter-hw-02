@@ -49,3 +49,5 @@ variable "metadata_map" {
     }
   }
 }
+
+variable test {}

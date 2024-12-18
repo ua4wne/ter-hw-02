@@ -107,3 +107,13 @@
 
 ## Задача 8*
 
+1. Напишите и проверьте переменную test и полное описание ее type в соответствии со значением из terraform.tfvars:
+
+![type](task8/type.png)
+
+2. Напишите выражение в terraform console, которое позволит вычленить строку "ssh -o 'StrictHostKeyChecking=no' ubuntu@62.84.124.117" из этой переменной.
+>Ответ: выражение var.test[0].dev1[0]
+
+![code](task8/code.png)
+
+## Задача 9*
