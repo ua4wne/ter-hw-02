@@ -82,4 +82,28 @@
 
 ## Задача 7*
 
+1. Напишите, какой командой можно отобразить второй элемент списка test_list.
+>Ответ: команда local.test_list[1]
+
+![cmd1](task7/1.png)
+
+2. Найдите длину списка test_list с помощью функции length(<имя переменной>).
+
+>Ответ: команда length(local.test_list)
+
+![cmd2](task7/2.png)
+
+3. Напишите, какой командой можно отобразить значение ключа admin из map test_map.
+
+>Ответ: команда local.test_map.admin
+
+![cmd3](task7/3.png)
+
+4. Напишите interpolation-выражение, результатом которого будет: "John is admin for production server based on OS ubuntu-20-04 with X vcpu, Y ram and Z virtual disks", используйте данные из переменных test_list, test_map, servers и функцию length() для подстановки значений.
+
+>Ответ: выражение "${local.test_map.admin} is admin for ${local.test_list[2]} server based on OS ${local.servers.production.image} with ${local.servers.production.cpu} vcpu, ${local.servers.production.ram} ram and ${length(local.servers.production.disks)} virtual disks"
+
+![cmd4](task7/4.png)
+
+## Задача 8*
 
