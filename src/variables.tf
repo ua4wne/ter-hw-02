@@ -31,8 +31,21 @@ variable "vpc_name" {
 
 ###ssh vars
 
-variable "vms_ssh_public_root_key" {
-  type        = string
-  default     = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIF6BlRL7ju3oOkk33aTncS7h7aChx4ZIaUs8wipYkZFS dervish@devops"
-  description = "ssh-keygen -t ed25519"
+# variable "vms_ssh_public_root_key" {
+#   type        = string
+#   default     = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIF6BlRL7ju3oOkk33aTncS7h7aChx4ZIaUs8wipYkZFS dervish@devops"
+#   description = "ssh-keygen -t ed25519"
+# }
+
+variable "metadata_map" {
+  type = map(object({
+    serial-port-enable = bool
+    ssh-keys           = string
+  }))
+  default = {
+    metadata = {
+      serial-port-enable = true
+      ssh-keys           = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIF6BlRL7ju3oOkk33aTncS7h7aChx4ZIaUs8wipYkZFS dervish@devops"
+    }
+  }
 }
